@@ -1,44 +1,38 @@
-# Spécification du Projet – Mini-App Deezer
+# 🎧 Mini Deezer App
 
-## Objectif
-Créer une application web qui utilise l'API Deezer pour permettre à l'utilisateur de rechercher de la musique et d'écouter des extraits.
+Une mini-application musicale développée avec HTML, CSS et JavaScript, qui permet aux utilisateurs de rechercher des chansons, artistes ou albums en utilisant l'API Deezer.
 
-## Fonctionnalités
-- Recherche d'artistes, d'albums ou de titres via un champ de recherche
-- Affichage des résultats sous forme de cartes (titre, artiste, image, bouton de lecture)
-- Lecteur intégré (extrait de 30 secondes)
-- Interface responsive
+## 🚀 Fonctionnalités
 
-## Technologies
-- HTML / CSS / JavaScript
-- API Deezer (recherche et extrait audio)
-- Hébergement : GitHub Pages
+- Recherche de chansons ou artistes via l'API Deezer
+- Affichage dynamique des résultats (titre, artiste, aperçu audio)
+- Interface responsive avec design épuré
+- Barre de navigation simple en haut de page
 
+## 🛠️ Technologies utilisées
 
----
+- HTML5
+- CSS3
+- JavaScript (Fetch API)
+- [API Deezer](https://developers.deezer.com/api)
 
-## 🚀 5. Étapes pour GitHub & GitHub Pages
+## 🌐 Déploiement
 
-1. Crée un dépôt sur GitHub (ex. : `mini-deezer-app`)
-2. Ajoute les fichiers :
-   - `index.html`
-   - `README.md`
-   - (optionnel : `specification.md`)
-3. Pousse sur GitHub :
+Ce projet est déployé avec **GitHub Pages**.  
+👉 [Lien vers l'application en ligne](https://TON-UTILISATEUR.github.io/PROJET-FINAL-DEESER-STUDIO-IA)
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/votre-utilisateur/mini-deezer-app.git
-git push -u origin main
+## 📂 Structure du projet
 
-## Déploiement
-[🔗 Lien vers l'application déployée](https://votre-utilisateur.github.io/mini-deezer-app/)
+PROJET-FINAL-DEESER-STUDIO-IA/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 
-## Installation locale
-```bash
-git clone https://github.com/votre-utilisateur/mini-deezer-app.git
+## ✨ Objectif pédagogique
 
-Auteur
-Mme NDIAYE – Projet IA GOMYCODE
+Ce projet a été réalisé dans le cadre du **Studio IA de GoMyCode** afin de mettre en pratique les compétences acquises en :
+- Développement frontend
+- Appels API
+- Déploiement GitHub Pages
