@@ -52,7 +52,7 @@ Ajoutez ici vos captures :
 
 ## 🔗 Lien du projet déployé
 
-> 🔥 [Voir la démo ici](https://votre-lien-github-pages)
+> 🔥 [Voir la démo ici](https://phina-d.github.io/PROJET-FINAL-DEESER-STUDIO-IA/)
 
 ---
 
