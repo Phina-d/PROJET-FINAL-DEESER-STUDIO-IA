@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Deezer App</title>
+  <style>
+ body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background: #f5f5f5;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+ input {
+  padding: 0.5rem;
+  width: 70%;
+  max-width: 400px;
+  text-align: left;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+#results {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 200px;
+}
+
+  .card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .card audio {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 500px) {
+     input, button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+.card {
+    width: 100%;
+  }
+    button {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .card {
+      width: 100%;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<h1>🎧 Mini Deezer App</h1>
+
+<div class="search-container">
+  <input type="text" id="search" placeholder="Rechercher une chanson ou un artiste" />
+  <button onclick="searchDeezer()">Rechercher</button>
+</div>
+
+  
+  <div id="results"></div>
+
+  <script>
+    function searchDeezer() {
+      const query = document.getElementById("search").value.trim();
+      if (!query) return alert("Veuillez entrer un mot-clé");
+
+      const script = document.createElement("script");
+      script.src = `https://api.deezer.com/search?q=${encodeURIComponent(query)}&output=jsonp&callback=handleResults`;
+      document.body.appendChild(script);
+    }
+
+    function handleResults(response) {
+      const results = document.getElementById("results");
+      results.innerHTML = "";
+
+      response.data.forEach(track => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${track.album.cover_medium}" alt="cover" />
+          <h4>${track.title}</h4>
+          <p>${track.artist.name}</p>
+          <audio controls src="${track.preview}"></audio>
+        `;
+        results.appendChild(card);
+      });
+    }
+  </script>
+
+</body>
+</html>
